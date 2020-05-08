@@ -1,0 +1,30 @@
+/**********************Tags*************************/
+body{font:12px/1.5em "Microsoft YaHei",微软雅黑,"Microsoft JhengHei",华文细黑,黑体; }
+/********* common *********/
+.hand{ cursor:pointer}
+.overflow{ overflow:hidden}
+.iframe { width:100%; overflow-x:hidden; overflow-y:auto; }
+label.error{ color:Red; display:inline-block; text-indent:20px; border:1px solid #efefef; background-color:Yellow;}
+label.success{ display:inline-block;}
+/********* bootstrap *********/
+.pagination { margin:0;}
+.table { font-size:12px;}
+.table .check td{ background-color:#ffc;}
+/********* Share *********/
+.layout { width:1003px; margin:0 auto; }
+/********* Login *********/
+#login{ width:480px; margin:0 auto; border:1px solid #cccccc; background-color:white; padding:20px;}
+/********* Layout *********/
+#header { margin-top:10px; }
+#footer{ margin-bottom:10px; text-align:center; }
+/********* Default *********/
+
+/********* Article *********/
+#fckImgListShow{ margin-top:10px; padding:10px}
+#fckImgSelect{ padding:10px;}
+.fckImgItem{ width:146px; height:146px; border:1px solid #D0EDF7; float:left; margin-top:10px; margin-left:10px; overflow:hidden; float:left; padding:2px}
+.fckImgItem img{ cursor:pointer}
+#fckImgSelect img{ width:140px;}
+/********* Jquery validate *********/
+.validation-summary-errors {  background-color:#FFFF99; font-size:14px; font-weight:bold; color:red}
+.validation-summary-errors li { padding:5px }

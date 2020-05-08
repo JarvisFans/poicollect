@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="jdbcTypeForNull" value="VARCHAR"/>
+    </settings>
+    <typeAliases>
+        <typeAlias alias="AMAP_AD_CODE_ALIAS"
+                   type="com.marika.po.AMapAdCode"/>
+        <typeAlias alias="AMAP_POI_CODE_ALIAS"
+                   type="com.marika.po.AMapPoiCode"/>
+    </typeAliases>
+    <environments default="poi">
+        <environment id="poi">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3316/POICOLLECT?useSSL=false"/>
+                <property name="username" value="root"/>
+                <property name="password" value="zcflove2014"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="mapper/AMAP_AD_CODE.xml"/>
+        <mapper resource="mapper/AMAP_POI_CODE.xml"/>
+    </mappers>
+
+</configuration>

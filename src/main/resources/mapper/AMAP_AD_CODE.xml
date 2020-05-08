@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.marika.mapper.AMapAdCodeOpt">
+    <select id="queryAdCode" resultType="com.marika.po.AMapAdCode">
+        SELECT * FROM AMAP_AD_CODE;
+    </select>
+
+    <select id="queryAdCodeWithProvince" resultType="com.marika.po.AMapAdCode">
+        SELECT * FROM AMAP_AD_CODE where ADCODE like "%0000" ;
+    </select>
+
+    <select id="queryAdCodeByProvince" resultType="com.marika.po.AMapAdCode">
+        SELECT * FROM AMAP_AD_CODE where ADCODE like "${cityPrefix}%" ;
+    </select>
+
+    <select id="queryAdCodeTotal" parameterType="String" resultType="int">
+        SELECT count(*) FROM AMAP_AD_CODE;
+    </select>
+</mapper>

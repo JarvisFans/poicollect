@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.marika.mapper.AMapPoiCodeOpt">
+    <select id="getPoiTypeListByPrefix" resultType="AMAP_POI_CODE_ALIAS">
+        SELECT TYPECODE FROM AMAP_POI_CODE WHERE TYPECODE LIKE "${prefix}%" ORDER BY TYPEID;
+    </select>
+
+    <select id="queryPoiCodeTotal" resultType="int">
+        SELECT count(*) FROM AMAP_POI_CODE;
+    </select>
+</mapper>
